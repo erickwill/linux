@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: GPL-2.0
+
+config BCACHEFS_FS
+	tristate "Bcachefs filesystem support"
+	select CRC32
+	select CRYPTO
+	select CRYPTO_CRC32C
+	select ZLIB_INFLATE
+	select ZLIB_DEFLATE
+	select FS_IOMAP
+	help
+	  Bcachefs is a modern copy-on-write filesystem for Linux.
+
+	  To compile this file system support as a module, choose M here. The
+	  module will be called bcachefs.
+
+	  If unsure, say N.
